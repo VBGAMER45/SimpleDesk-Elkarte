@@ -1,0 +1,220 @@
+/**
+ * SimpleDesk Helpdesk - Icon Styles
+ *
+ * Defines icon classes used throughout the helpdesk interface.
+ * Icons reference images from the simpledesk/ subdirectory of the theme images folder.
+ *
+ * @package SimpleDesk
+ * @version 2.1.5
+ */
+
+/* ==========================================================================
+   Menu / Navigation Icons
+   ========================================================================== */
+
+.i-helpdesk::before {
+	content: '';
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+	margin-right: 4px;
+}
+
+/* ==========================================================================
+   Small inline icons (16x16) used in ticket listings, details, etc.
+   ========================================================================== */
+
+.shd_smallicon {
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+
+/* Status icons */
+.shd_icon_status {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+
+/* Urgency icons */
+.shd_icon_urgency {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+
+/* ==========================================================================
+   Ticket status indicator colors
+   ========================================================================== */
+
+.shd_status_new {
+	color: #c00;
+	font-weight: bold;
+}
+
+.shd_status_pending_staff {
+	color: #f90;
+	font-weight: bold;
+}
+
+.shd_status_pending_user {
+	color: #09c;
+}
+
+.shd_status_closed {
+	color: #090;
+}
+
+.shd_status_deleted {
+	color: #999;
+	text-decoration: line-through;
+}
+
+.shd_status_with_supervisor {
+	color: #c60;
+	font-weight: bold;
+}
+
+.shd_status_escalated {
+	color: #c00;
+	font-weight: bold;
+}
+
+/* ==========================================================================
+   Urgency indicator colors
+   ========================================================================== */
+
+.shd_urgency_low {
+	color: #666;
+}
+
+.shd_urgency_medium {
+	color: #333;
+}
+
+.shd_urgency_high {
+	color: #f90;
+	font-weight: bold;
+}
+
+.shd_urgency_vhigh {
+	color: #f60;
+	font-weight: bold;
+}
+
+.shd_urgency_severe {
+	color: #c00;
+	font-weight: bold;
+}
+
+.shd_urgency_critical {
+	color: #900;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Privacy indicator
+   ========================================================================== */
+
+.shd_privacy_icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+.shd_private_indicator {
+	color: #c00;
+	font-style: italic;
+}
+
+/* ==========================================================================
+   Action button icons (in ticket view navigation)
+   ========================================================================== */
+
+.shd_action_icon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+	margin-right: 4px;
+}
+
+/* ==========================================================================
+   Board index helpdesk icon
+   ========================================================================== */
+
+.board_helpdesk {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+
+/* ==========================================================================
+   Admin panel icons
+   ========================================================================== */
+
+.shd_admin_icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin-right: 4px;
+}
+
+/* Plugin toggle switch icons */
+.features_switch {
+	float: right;
+	padding: 4px;
+}
+
+.features_switch img {
+	cursor: pointer;
+}
+
+/* ==========================================================================
+   Misc icon utilities
+   ========================================================================== */
+
+.shd_icon_inline {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 2px;
+}
+
+.shd_ticket_type_icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin-right: 4px;
+}
+
+/* Custom field icons */
+.shd_cf_icon {
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	vertical-align: middle;
+	margin-right: 4px;
+}
+
+/* Relationship type icons */
+.shd_rel_icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+	margin-right: 4px;
+}

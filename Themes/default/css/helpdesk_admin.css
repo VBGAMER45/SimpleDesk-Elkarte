@@ -1,0 +1,14 @@
+/**
+ * SimpleDesk Helpdesk - Admin Stylesheet
+ * @package SimpleDesk
+ * @version 2.1.5
+ */
+
+/* Admin info page */
+#admincenter .shd_admin_info dl.settings dt {
+	width: 200px;
+}
+
+#admincenter .shd_admin_info dl.settings dd {
+	margin-left: 220px;
+}

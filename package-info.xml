@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.elkarte.net/site/package-info">
+
+<package-info xmlns="http://www.elkarte.net/site/package-info" xmlns:elk="http://www.elkarte.net/">
+	<id>simpledesk:SimpleDesk</id>
+	<name>SimpleDesk Helpdesk</name>
+	<type>modification</type>
+	<version>2.1.5</version>
+
+	<install for="1.1 - 1.1.99">
+		<!-- Source files -->
+		<require-file name="Sources/SimpleDesk.integrate.php" destination="SOURCEDIR" />
+		<require-file name="Sources/controllers/SimpleDesk.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskDisplay.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskPost.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskSearch.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskAssign.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskDelete.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskMisc.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskMoveDept.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskNotify.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskAjax.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/admin/ManageSimpleDesk.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/admin/ManageSimpleDeskDepts.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/admin/ManageSimpleDeskPerms.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/admin/ManageSimpleDeskCustomField.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/admin/ManageSimpleDeskCannedReplies.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/admin/ManageSimpleDeskMaint.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/admin/ManageSimpleDeskPlugins.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/subs/SimpleDesk.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskPermissions.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskAdmin.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskPost.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskDisplay.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskSearch.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskProfile.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskBoardIndex.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskAttachments.subs.php" destination="SUBSDIR" />
+
+		<!-- Template files -->
+		<require-file name="Themes/default/SimpleDesk.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskDisplay.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskPost.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskSearch.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAdmin.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAdminDepts.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAdminPerms.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAdminCustomField.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAdminCannedReplies.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAdminMaint.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAdminPlugins.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAssign.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskMoveDept.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskProfile.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskBoardIndex.template.php" destination="THEMEDIR" />
+
+		<!-- Language files -->
+		<require-file name="Themes/default/languages/english/SimpleDesk.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Themes/default/languages/english/SimpleDeskAdmin.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Themes/default/languages/english/SimpleDeskPermissions.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Themes/default/languages/english/SimpleDeskLogAction.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Themes/default/languages/english/SimpleDeskNotifications.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Themes/default/languages/english/SimpleDeskProfile.english.php" destination="LANGUAGEDIR/english" />
+
+		<!-- CSS and JS -->
+		<require-file name="Themes/default/css/helpdesk.css" destination="THEMEDIR/css" />
+		<require-file name="Themes/default/css/helpdesk_admin.css" destination="THEMEDIR/css" />
+		<require-file name="Themes/default/scripts/helpdesk.js" destination="THEMEDIR/scripts" />
+		<require-file name="Themes/default/scripts/helpdesk_admin.js" destination="THEMEDIR/scripts" />
+
+		<!-- Images -->
+		<require-dir name="Themes/default/images/simpledesk" destination="IMAGESDIR" />
+
+		<!-- Database install -->
+		<code>install_simpledesk.php</code>
+
+		<!-- Hooks -->
+		<hook hook="integrate_actions" function="simpledesk_integrate_actions" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_menu_buttons" function="simpledesk_integrate_menu_buttons" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_load_theme" function="simpledesk_integrate_load_theme" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_admin_areas" function="simpledesk_integrate_admin_areas" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_load_permissions" function="simpledesk_integrate_load_permissions" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_credits" function="simpledesk_integrate_credits" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_current_action" function="simpledesk_integrate_current_action" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_buffer" function="simpledesk_integrate_buffer" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_pre_profile_areas" function="simpledesk_integrate_pre_profile_areas" file="SOURCEDIR/SimpleDesk.integrate.php" />
+
+		<redirect url="?action=admin;area=helpdesk">SimpleDesk has been installed successfully.</redirect>
+	</install>
+
+	<upgrade from="all" for="1.1 - 1.1.99">
+		<!-- Source files -->
+		<require-file name="Sources/SimpleDesk.integrate.php" destination="SOURCEDIR" />
+		<require-file name="Sources/controllers/SimpleDesk.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskDisplay.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskPost.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskSearch.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskAssign.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskDelete.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskMisc.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskMoveDept.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskNotify.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/controllers/SimpleDeskAjax.controller.php" destination="CONTROLLERDIR" />
+		<require-file name="Sources/admin/ManageSimpleDesk.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/admin/ManageSimpleDeskDepts.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/admin/ManageSimpleDeskPerms.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/admin/ManageSimpleDeskCustomField.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/admin/ManageSimpleDeskCannedReplies.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/admin/ManageSimpleDeskMaint.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/admin/ManageSimpleDeskPlugins.controller.php" destination="ADMINDIR" />
+		<require-file name="Sources/subs/SimpleDesk.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskPermissions.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskAdmin.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskPost.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskDisplay.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskSearch.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskProfile.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskBoardIndex.subs.php" destination="SUBSDIR" />
+		<require-file name="Sources/subs/SimpleDeskAttachments.subs.php" destination="SUBSDIR" />
+
+		<!-- Template files -->
+		<require-file name="Themes/default/SimpleDesk.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskDisplay.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskPost.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskSearch.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAdmin.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAdminDepts.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAdminPerms.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAdminCustomField.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAdminCannedReplies.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAdminMaint.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAdminPlugins.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskAssign.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskMoveDept.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskProfile.template.php" destination="THEMEDIR" />
+		<require-file name="Themes/default/SimpleDeskBoardIndex.template.php" destination="THEMEDIR" />
+
+		<!-- Language files -->
+		<require-file name="Themes/default/languages/english/SimpleDesk.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Themes/default/languages/english/SimpleDeskAdmin.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Themes/default/languages/english/SimpleDeskPermissions.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Themes/default/languages/english/SimpleDeskLogAction.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Themes/default/languages/english/SimpleDeskNotifications.english.php" destination="LANGUAGEDIR/english" />
+		<require-file name="Themes/default/languages/english/SimpleDeskProfile.english.php" destination="LANGUAGEDIR/english" />
+
+		<!-- CSS and JS -->
+		<require-file name="Themes/default/css/helpdesk.css" destination="THEMEDIR/css" />
+		<require-file name="Themes/default/css/helpdesk_admin.css" destination="THEMEDIR/css" />
+		<require-file name="Themes/default/scripts/helpdesk.js" destination="THEMEDIR/scripts" />
+		<require-file name="Themes/default/scripts/helpdesk_admin.js" destination="THEMEDIR/scripts" />
+
+		<!-- Images -->
+		<require-dir name="Themes/default/images/simpledesk" destination="IMAGESDIR" />
+
+		<!-- Database upgrade -->
+		<code>install_simpledesk.php</code>
+
+		<!-- Hooks -->
+		<hook hook="integrate_actions" function="simpledesk_integrate_actions" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_menu_buttons" function="simpledesk_integrate_menu_buttons" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_load_theme" function="simpledesk_integrate_load_theme" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_admin_areas" function="simpledesk_integrate_admin_areas" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_load_permissions" function="simpledesk_integrate_load_permissions" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_credits" function="simpledesk_integrate_credits" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_current_action" function="simpledesk_integrate_current_action" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_buffer" function="simpledesk_integrate_buffer" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook hook="integrate_pre_profile_areas" function="simpledesk_integrate_pre_profile_areas" file="SOURCEDIR/SimpleDesk.integrate.php" />
+
+		<redirect url="?action=admin;area=helpdesk">SimpleDesk has been upgraded successfully.</redirect>
+	</upgrade>
+
+	<uninstall for="1.1 - 1.1.99">
+		<code>uninstall_simpledesk.php</code>
+
+		<!-- Reverse hooks -->
+		<hook reverse="true" hook="integrate_actions" function="simpledesk_integrate_actions" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook reverse="true" hook="integrate_menu_buttons" function="simpledesk_integrate_menu_buttons" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook reverse="true" hook="integrate_load_theme" function="simpledesk_integrate_load_theme" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook reverse="true" hook="integrate_admin_areas" function="simpledesk_integrate_admin_areas" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook reverse="true" hook="integrate_load_permissions" function="simpledesk_integrate_load_permissions" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook reverse="true" hook="integrate_credits" function="simpledesk_integrate_credits" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook reverse="true" hook="integrate_current_action" function="simpledesk_integrate_current_action" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook reverse="true" hook="integrate_buffer" function="simpledesk_integrate_buffer" file="SOURCEDIR/SimpleDesk.integrate.php" />
+		<hook reverse="true" hook="integrate_pre_profile_areas" function="simpledesk_integrate_pre_profile_areas" file="SOURCEDIR/SimpleDesk.integrate.php" />
+
+		<!-- Remove source files -->
+		<remove-file name="SOURCEDIR/SimpleDesk.integrate.php" />
+		<remove-file name="CONTROLLERDIR/SimpleDesk.controller.php" />
+		<remove-file name="CONTROLLERDIR/SimpleDeskDisplay.controller.php" />
+		<remove-file name="CONTROLLERDIR/SimpleDeskPost.controller.php" />
+		<remove-file name="CONTROLLERDIR/SimpleDeskSearch.controller.php" />
+		<remove-file name="CONTROLLERDIR/SimpleDeskAssign.controller.php" />
+		<remove-file name="CONTROLLERDIR/SimpleDeskDelete.controller.php" />
+		<remove-file name="CONTROLLERDIR/SimpleDeskMisc.controller.php" />
+		<remove-file name="CONTROLLERDIR/SimpleDeskMoveDept.controller.php" />
+		<remove-file name="CONTROLLERDIR/SimpleDeskNotify.controller.php" />
+		<remove-file name="CONTROLLERDIR/SimpleDeskAjax.controller.php" />
+		<remove-file name="ADMINDIR/ManageSimpleDesk.controller.php" />
+		<remove-file name="ADMINDIR/ManageSimpleDeskDepts.controller.php" />
+		<remove-file name="ADMINDIR/ManageSimpleDeskPerms.controller.php" />
+		<remove-file name="ADMINDIR/ManageSimpleDeskCustomField.controller.php" />
+		<remove-file name="ADMINDIR/ManageSimpleDeskCannedReplies.controller.php" />
+		<remove-file name="ADMINDIR/ManageSimpleDeskMaint.controller.php" />
+		<remove-file name="ADMINDIR/ManageSimpleDeskPlugins.controller.php" />
+		<remove-file name="SUBSDIR/SimpleDesk.subs.php" />
+		<remove-file name="SUBSDIR/SimpleDeskPermissions.subs.php" />
+		<remove-file name="SUBSDIR/SimpleDeskAdmin.subs.php" />
+		<remove-file name="SUBSDIR/SimpleDeskPost.subs.php" />
+		<remove-file name="SUBSDIR/SimpleDeskDisplay.subs.php" />
+		<remove-file name="SUBSDIR/SimpleDeskSearch.subs.php" />
+		<remove-file name="SUBSDIR/SimpleDeskProfile.subs.php" />
+		<remove-file name="SUBSDIR/SimpleDeskBoardIndex.subs.php" />
+		<remove-file name="SUBSDIR/SimpleDeskAttachments.subs.php" />
+
+		<!-- Remove template files -->
+		<remove-file name="THEMEDIR/SimpleDesk.template.php" />
+		<remove-file name="THEMEDIR/SimpleDeskDisplay.template.php" />
+		<remove-file name="THEMEDIR/SimpleDeskPost.template.php" />
+		<remove-file name="THEMEDIR/SimpleDeskSearch.template.php" />
+		<remove-file name="THEMEDIR/SimpleDeskAdmin.template.php" />
+		<remove-file name="THEMEDIR/SimpleDeskAdminDepts.template.php" />
+		<remove-file name="THEMEDIR/SimpleDeskAdminPerms.template.php" />
+		<remove-file name="THEMEDIR/SimpleDeskAdminCustomField.template.php" />
+		<remove-file name="THEMEDIR/SimpleDeskAdminCannedReplies.template.php" />
+		<remove-file name="THEMEDIR/SimpleDeskAdminMaint.template.php" />
+		<remove-file name="THEMEDIR/SimpleDeskAdminPlugins.template.php" />
+		<remove-file name="THEMEDIR/SimpleDeskAssign.template.php" />
+		<remove-file name="THEMEDIR/SimpleDeskMoveDept.template.php" />
+		<remove-file name="THEMEDIR/SimpleDeskProfile.template.php" />
+		<remove-file name="THEMEDIR/SimpleDeskBoardIndex.template.php" />
+
+		<!-- Remove language files -->
+		<remove-file name="LANGUAGEDIR/english/SimpleDesk.english.php" />
+		<remove-file name="LANGUAGEDIR/english/SimpleDeskAdmin.english.php" />
+		<remove-file name="LANGUAGEDIR/english/SimpleDeskPermissions.english.php" />
+		<remove-file name="LANGUAGEDIR/english/SimpleDeskLogAction.english.php" />
+		<remove-file name="LANGUAGEDIR/english/SimpleDeskNotifications.english.php" />
+		<remove-file name="LANGUAGEDIR/english/SimpleDeskProfile.english.php" />
+
+		<!-- Remove CSS, JS, Images -->
+		<remove-file name="THEMEDIR/css/helpdesk.css" />
+		<remove-file name="THEMEDIR/css/helpdesk_admin.css" />
+		<remove-file name="THEMEDIR/scripts/helpdesk.js" />
+		<remove-file name="THEMEDIR/scripts/helpdesk_admin.js" />
+		<remove-dir name="IMAGESDIR/simpledesk" />
+
+		<!-- Database removal -->
+		<database>uninstall_simpledesk_db.php</database>
+	</uninstall>
+</package-info>

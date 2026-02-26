@@ -1,0 +1,48 @@
+/**
+ * SimpleDesk - Responsive Styles
+ *
+ * Responsive layout adjustments for helpdesk pages on
+ * tablet and mobile devices.
+ *
+ * @package SimpleDesk
+ * @version 2.1.5
+ */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+	.shd_ticketlist_header span,
+	.sd_unread_title span {
+		font-size: 0.85em;
+	}
+	.shd_ticket_side_column {
+		width: 100% !important;
+		float: none !important;
+	}
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+	.shd_ticketlist td,
+	.shd_ticket_side_column,
+	.shd_ticket_main_column {
+		display: block;
+		width: 100% !important;
+		float: none !important;
+	}
+	.shd_ticketlist_header {
+		display: none;
+	}
+	.sd_unread_title {
+		display: none;
+	}
+	.sd_unread_row span {
+		display: block;
+		width: 100% !important;
+	}
+	.shd_ticket_details dl dt,
+	.shd_ticket_details dl dd {
+		display: block;
+		width: 100% !important;
+		float: none !important;
+	}
+}

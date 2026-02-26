@@ -1,0 +1,355 @@
+/**
+ * SimpleDesk Helpdesk - Main Stylesheet
+ * @package SimpleDesk
+ * @version 2.1.5
+ */
+
+/* Main helpdesk container */
+#shd_main {
+	margin: 0 auto;
+	padding: 0;
+}
+
+/* Department list */
+.shd_departments {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	padding: 8px 0;
+}
+
+.shd_departments .content {
+	padding: 10px 12px;
+}
+
+.shd_departments .content h4 {
+	margin: 0 0 8px 0;
+	padding-bottom: 8px;
+	overflow: hidden;
+}
+
+.shd_dept_card {
+	flex: 1 1 300px;
+	max-width: 400px;
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	background: #fafafa;
+}
+
+.shd_dept_card h4 {
+	margin: 0 0 5px 0;
+}
+
+.shd_dept_card h4 a {
+	font-size: 1.1em;
+}
+
+.shd_dept_card p {
+	margin: 4px 0 0;
+	color: #555;
+	font-size: 0.9em;
+}
+
+.shd_dept_count {
+	display: inline-block;
+	margin-left: 8px;
+	padding: 1px 6px;
+	border-radius: 10px;
+	background: #4a8;
+	color: #fff;
+	font-size: 0.8em;
+	vertical-align: middle;
+}
+
+.shd_dept_count.zero {
+	background: #999;
+}
+
+/* Navigation buttons */
+.shd_nav_buttons {
+	padding: 4px 0;
+	margin-bottom: 4px;
+}
+
+.shd_nav_buttons .buttonlist li a {
+	padding: 4px 12px;
+}
+
+/* "Go to Ticket" form */
+.shd_go_ticket {
+	display: inline-block;
+	float: right;
+	padding: 2px 0;
+}
+
+.shd_go_ticket input[type="text"] {
+	width: 60px;
+	padding: 3px 6px;
+	text-align: center;
+}
+
+/* Ticket block */
+.shd_ticket_block {
+	margin-bottom: 12px;
+}
+
+.shd_ticket_block .cat_bar {
+	position: relative;
+}
+
+.shd_block_count {
+	font-weight: normal;
+	font-size: 0.85em;
+	color: #ccc;
+	margin-left: 6px;
+}
+
+.shd_block_pages {
+	float: right;
+	font-size: 0.85em;
+	font-weight: normal;
+}
+
+/* Ticket list table */
+.shd_ticketid {
+	text-align: center;
+	width: 7%;
+}
+
+.shd_subject {
+	min-width: 200px;
+}
+
+.shd_starter,
+.shd_assigned {
+	width: 13%;
+}
+
+.shd_replies {
+	width: 6%;
+	text-align: center;
+}
+
+.shd_status {
+	width: 12%;
+}
+
+.shd_urgency {
+	width: 8%;
+}
+
+.shd_updated {
+	width: 16%;
+}
+
+/* Sort arrows in column headers */
+.sort_arrow {
+	font-size: 0.75em;
+	vertical-align: middle;
+}
+
+th a {
+	text-decoration: none;
+	color: inherit;
+}
+
+th a:hover {
+	text-decoration: underline;
+}
+
+/* Unread ticket styling */
+.shd_unread td {
+	font-weight: bold;
+}
+
+.shd_unread .shd_subject a {
+	font-weight: bold;
+}
+
+.shd_private {
+	color: #c00;
+	font-size: 0.85em;
+	font-weight: bold;
+}
+
+/* Ticket display */
+.shd_ticket_side {
+	width: 200px;
+	float: right;
+	padding: 8px;
+}
+
+.shd_ticket_side dt {
+	font-weight: bold;
+}
+
+.shd_ticket_content {
+	margin-right: 220px;
+	padding: 8px;
+}
+
+/* Reply list */
+.shd_replies_container .windowbg {
+	margin-bottom: 4px;
+	padding: 8px;
+}
+
+.shd_reply_header {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 4px;
+	margin-bottom: 8px;
+}
+
+.shd_reply_body {
+	padding: 4px 0;
+}
+
+/* Status indicators */
+.shd_status_new { color: #080; font-weight: bold; }
+.shd_status_pending_staff { color: #c60; }
+.shd_status_pending_user { color: #06c; }
+.shd_status_closed { color: #888; }
+.shd_status_deleted { color: #c00; }
+.shd_status_hold { color: #808; }
+
+/* Urgency indicators */
+.shd_urgency_high { color: #c60; font-weight: bold; }
+.shd_urgency_vhigh { color: #c00; font-weight: bold; }
+.shd_urgency_severe { color: #900; font-weight: bold; }
+.shd_urgency_critical { color: #600; font-weight: bold; background: #fee; }
+
+/* Ticket posting form - two-column layout */
+.shd_ticket {
+	overflow: hidden;
+}
+
+.shd_ticket_side_column {
+	float: right;
+	width: 210px;
+	margin-left: 12px;
+}
+
+.shd_ticketdetails {
+	padding: 8px;
+	background: #f5f5f0;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.shd_ticketdetails strong {
+	font-size: 1.05em;
+}
+
+.shd_ticketdetails hr {
+	border: 0;
+	border-top: 1px solid #ddd;
+	margin: 6px 0;
+}
+
+.shd_ticketdetails ul.reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.shd_ticketdetails ul.reset li {
+	padding: 3px 0;
+	font-size: 0.92em;
+}
+
+.shd_ticketdetails ul.reset li strong {
+	font-size: 1em;
+}
+
+.shd_ticketdetails select {
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 0.9em;
+}
+
+.shd_ticket_description {
+	margin-right: 230px;
+}
+
+.shd_post_form {
+	padding: 8px;
+}
+
+.shd_post_form label {
+	display: block;
+	margin-bottom: 4px;
+	font-weight: bold;
+}
+
+.shd_post_form input[type="text"],
+.shd_post_form select,
+.shd_post_form textarea {
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+/* Custom fields collapsible section */
+.shd_customfields {
+	padding: 4px 0;
+}
+
+.shd_customfields dl.settings {
+	margin-bottom: 4px;
+}
+
+.shd_required {
+	color: #c00;
+	font-weight: bold;
+}
+
+/* Additional options collapsible section */
+.shd_additional_options ul.post_options {
+	list-style: none;
+	margin: 0;
+	padding: 4px 8px;
+}
+
+.shd_additional_options ul.post_options li {
+	padding: 2px 0;
+}
+
+.shd_additional_options ul.post_options label {
+	font-weight: normal;
+	display: inline;
+}
+
+/* Attachment area in post form */
+.shd_attachments {
+	padding: 4px 8px;
+}
+
+.shd_attachments dl {
+	margin: 0;
+}
+
+.shd_attachments dt {
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+.shd_attachments dd {
+	margin-left: 0;
+	padding: 2px 0;
+}
+
+/* Action log */
+.shd_action_log {
+	margin-top: 10px;
+}
+
+.shd_action_log .windowbg {
+	padding: 4px 8px;
+	font-size: 0.9em;
+}
+
+/* Assign dialog */
+.shd_assign_container {
+	padding: 10px;
+}
